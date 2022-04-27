@@ -342,6 +342,7 @@ export default {
                     console.log(data);
                 }
             });
+            this.getTrucks();
         },
     deleteTruck: function () {
       var vm = this;
@@ -362,6 +363,7 @@ export default {
         }
       });
       store.state.editTruckToggle = !store.state.editTruckToggle;
+      this.getTrucks();
     },
     addToggle() {
       store.state.addTruckToggle = !store.state.addTruckToggle;
@@ -400,6 +402,7 @@ export default {
             console.log(data);
           }
         });
+        this.getTrucks();
       }
     },
     form() {
